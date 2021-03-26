@@ -100,7 +100,21 @@ We divide the task into two subtasks: if we choose the first position to build a
 	>
 	
 2. Provide asymptotic worst-case time complexity of the recursive algo-
-    rithm.
+    rithm.  
+    #### Answer : 
+    > #### The ful time complexity:
+    > 
+	>    1. **T(n)** = T(n-1) + T(n - d') +  c , d' >= 1, c - some constant
+	>    2. **T(0)** = Θ(1)
+	> #### In the worst- case `d' = 1`:
+    >
+	>    **T(n)** = 2*T(n-1) + c =  
+	>    = 2*(2*T(n-2) + c )+ c = 4*T(n-2) + 3c =  
+	>    = 4*(2*T(n-3) + c) + 3c = 8*T(n-3) + 7c =   
+	>	  = 2^k^ * T(n-k) + 2^k^ c - c  
+	>
+	>  	**`(k = n)`** => T(n) = Θ( 2^n^ + 2^k^c) = Θ(2^n^)
+			
 3. Identify overlapping subproblems.
 4. Write down pseudocode for the optimized algorithm that solves the
     problem using dynamic programming (top-down or bottom-up). The
@@ -115,7 +129,7 @@ We divide the task into two subtasks: if we choose the first position to build a
 
 1. Briefly explain how insertion sort works.
 2. Prove that the worst and the best case running times of insertion sort
-    are Θ( _n_^2 ) and Θ( _n_ ), respectively.
+    are Θ( _n_^2^ ) and Θ( _n_ ), respectively.
 3. What is a _k_ -sorted array? Is insertion sort fast or slow, relative to its
     worst-case, when applied to a _k_ -sorted array? Justify your answer by
     computing the running time of insertion sort for a _k_ -sorted array.
