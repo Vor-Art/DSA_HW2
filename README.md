@@ -616,3 +616,8 @@ ___
 > ###### (^1) median values are those in the middle of the sorted sequence of values. For example,
 > ###### 5 is median in 1, 2, 5, 100, 254. When number of elements is even, we have two median
 > ###### values and the algorithm can return either one.
+
+### Answer : 
+
+![image](https://user-images.githubusercontent.com/47717531/112690261-8b62b680-8e8c-11eb-82c2-55e5229e94fa.png)
+
