@@ -456,27 +456,75 @@ Consider the following sequence of numbers:
     Particular attention should be paid to explaining the reasoning.
     
 ![image](https://user-images.githubusercontent.com/47717531/112558655-4b45fa00-8de0-11eb-825e-9b5b66242b50.png)
-
-
-
 ```
 Figure 1: Initial AVL tree for insertion.
 ```
-4. List values at the nodes of the tree by in-order traversal of the tree. 
+	#### Answer :   
+1. 25: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112684314-e8a63a00-8e83-11eb-8e31-82e13817383a.png)  
+2. 60: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112684436-18edd880-8e84-11eb-83f3-9d031ae7450a.png)  
+60: balance (left):  
+	![image](https://user-images.githubusercontent.com/47717531/112684470-26a35e00-8e84-11eb-9be5-7ad486197e82.png)  
+3. 35: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112684507-3327b680-8e84-11eb-8bc9-fb4e2438221d.png)   
+35: balance(right-left):  
+	![image](https://user-images.githubusercontent.com/47717531/112684556-3de24b80-8e84-11eb-8f65-cc6ce84be764.png)  
+4. 10: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112684613-505c8500-8e84-11eb-9438-e7bef7f4cdbc.png)  
+5. 5: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112684674-68340900-8e84-11eb-9220-a13634104568.png)
+6. 20: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685295-6880d400-8e85-11eb-894a-678abfd80e24.png)  
+balance(left-right):  
+	![image](https://user-images.githubusercontent.com/47717531/112685324-73d3ff80-8e85-11eb-8273-f0473657c8f8.png)  
+7. 65: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685341-7b93a400-8e85-11eb-9f22-dc534870dc3f.png)  
+8. 45: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685528-c2819980-8e85-11eb-8558-1065107b8d61.png)  
+9. 70: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685554-cd3c2e80-8e85-11eb-9f8a-799fc1ad660d.png)
+10. 40: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685580-d9c08700-8e85-11eb-9c4f-8db4e1b756be.png)  
+11. 50: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685600-e1802b80-8e85-11eb-9167-c5b68766583c.png)
+12. 55: insert:    
+	![image](https://user-images.githubusercontent.com/47717531/112685628-e80ea300-8e85-11eb-8946-a1c04d969ca1.png)
+balance (R-L):  
+	![image](https://user-images.githubusercontent.com/47717531/112685662-f2c93800-8e85-11eb-95f2-c16b4603b24f.png)  
+13. 30: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685701-01175400-8e86-11eb-969f-d77c1da26c53.png)  
+balance (L-R):   
+	![image](https://user-images.githubusercontent.com/47717531/112685721-08d6f880-8e86-11eb-8931-28c93dbab9b7.png)  
+14. 15: insert:  
+	![image](https://user-images.githubusercontent.com/47717531/112685765-17bdab00-8e86-11eb-8c02-e00f3c77ab9b.png)  
+balance (L-R):  
+	![image](https://user-images.githubusercontent.com/47717531/112685796-22784000-8e86-11eb-8ab5-a5d947da0d08.png)  
+
+#### Final:     
+![image](https://user-images.githubusercontent.com/47717531/112685839-2dcb6b80-8e86-11eb-87a8-443591ca9630.png)  
+
+
+
+
+
+4) List values at the nodes of the tree by in-order traversal of the tree. 
 	What property does resulting sequence have? Is this always the case?
+	
 	#### Answer : 
 	> ``` c++
 	>		List : 1, 2, 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70
 	> ```
 	>a. **property:** this list is sorted.  
-	>b. Yes, it is the main idea of  AVL tree.  
-6. Starting with the same initial tree, construct a 2-3 tree by inserting
+	>b. Yes, it is the main idea of  AVL tree. 
+	 
+5. Starting with the same initial tree, construct a 2-3 tree by inserting
     values in the order of the sequence above.
    	#### Answer : 
 	>  ![image](https://user-images.githubusercontent.com/47717531/112561025-69622900-8de5-11eb-91dc-28593f0d39a4.png)
 
-7. Explain in words or in pseudocode *delete* operation for AVL trees.
-8. Give the trees obtained by deleting 45 and then 30 in the tree below.
+6. Explain in words or in pseudocode *delete* operation for AVL trees.
+7. Give the trees obtained by deleting 45 and then 30 in the tree below.
 
 ![image](https://user-images.githubusercontent.com/47717531/112557565-ce198580-8ddd-11eb-8a00-6af5f5d0ed0c.png)
 
