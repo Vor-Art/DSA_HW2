@@ -96,7 +96,7 @@ length of the highway H :
 	>}
 	>```
 	>**explanation:**   
-We divide the task into two subtasks: if we choose the first position to build a shop `t2` and if we don't `t1`. If we take it, we run the same algorithm recursively, with no positions closer to d than our `Places.withoutClosest(d)` . If we don't take it, we remove the first element from the array  `Places.withoutFirst()`.
+We divide the task into two subtasks: if we choose the first position to build a shop `t2` and if we don't `t1`. If we take it, we run the same algorithm recursively, with no positions current and closer to d positionsthan our `Places.withoutClosest(d)` . If we don't take it, we remove the first element from the array  `Places.withoutFirst()`.
 	>
 	
 2. Provide asymptotic worst-case time complexity of the recursive algo-
@@ -116,6 +116,18 @@ We divide the task into two subtasks: if we choose the first position to build a
 	>  	**`(k = n)`** => T(n) = Θ( 2^n^ + 2^k^c) = Θ(2^n^)
 			
 3. Identify overlapping subproblems.
+
+	#### Answer : 
+	> #### overlapping:
+	> In the process of performing recursion, it may happen that the function will be executed with the same input data that it  was previously calculated with. Since this function is pure, that is, it depends only on the input values, the program performs unnecessary work.  
+	>
+	> **simple example:**
+	 `p={p1,p2,p3}, d = 0`
+	  **1's step**  `Func({p1, p2, p3})`
+  	  **2's step**  `Func({p2, p3})` and `Func({p2, p3})`
+	  **3's step**  `Func({p3})`,`Func({p3})`,`Func({p3})`,`Func({p3})`
+	>
+    
 4. Write down pseudocode for the optimized algorithm that solves the
     problem using dynamic programming (top-down or bottom-up). The
     algorithm should compute both the maximum estimated revenue **and**
