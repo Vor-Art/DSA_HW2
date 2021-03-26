@@ -1,6 +1,7 @@
 
 
 
+
 # Data Structures and Algorithms
 > Spring 2021
 > Assignment No **2**
@@ -618,6 +619,67 @@ ___
 > ###### values and the algorithm can return either one.
 
 ### Answer : 
+>The average heap algorithm is based on the use of two types of heaps: max and min both with size equal to n/2. The idea is that: the First heap stores all values less than the median, and the second one stores the other values higher. Then in order to get the median, you need to take the first element in the largest heap.
 
+> The good illustration:
 ![image](https://user-images.githubusercontent.com/47717531/112690261-8b62b680-8e8c-11eb-82c2-55e5229e94fa.png)
 
+
+### implementation:
+```c++
+structure medianHeap
+    public methods:
+    insert(k)       — insert value
+    removeMedian()  — remove median value and return it
+    size()          — return the size of the data structure
+    isEmpty()       — check if the structure is empty (no values)
+  
+  private methods:
+    getMedian()    — return the value of median
+  
+  private fields:
+    minHeap — min binary heap stores all elements not smaller than the median
+    maxHeap — max binary heap stores all elements not greater than the median
+    size    — integer number stores the count of elements
+end
+
+medianHeap.insert(k) // O(logn)
+  if( k < get_median() )
+    maxHeap.insert(k)
+  else
+    minHeap.insert(k)
+  
+  if( abs( minHeap.size() - maxHeap.size() ) > 1)
+    if(minHeap.size() > maxHeap.size())
+      maxHeap.insert( minHeap.removeFirst() )
+    else
+      minHeap.insert( maxHeap.removeFirst() )
+  size += 1
+end
+
+medianHeap.remove_median() // O(logn)
+  if(minHeap.size() < maxHeap.size())
+    return maxHeap.removeFirst()
+  else
+    return minHeap.removeFirst()
+  size -= 1
+end
+
+medianHeap.size()   // O(1)
+  return size
+end
+
+medianHeap.isEmpty()// O(1)
+  return (size == 0)
+end
+
+medianHeap::get_median() // O(1)
+  if(size == 0)
+    return 0
+    
+  if(minHeap.size() < maxHeap.size())
+    return maxHeap.first()
+  else
+    return minHeap.first()
+end
+```
