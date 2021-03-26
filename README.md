@@ -70,6 +70,35 @@ length of the highway H :
 ```
 1. Write down pseudocode for a recursive algorithm that solves the prob-
     lem.
+    
+    #### Answer : 
+    >**input:**
+	>* **Places** is array of structure, were first part is ***income*** (r1, r2, ... , rn) and second is ***position*** (x1, x2, ... , xn)
+	>* **d** our constrain  
+	>
+	>**output:**
+	> + Pair of
+	>    *  first - **profit** is maximum possible income
+	>    *  second - **positions** is array of places that satisfy the profit
+	>``` c++
+	>Func (Places) -> pair(profit, positions)
+	>{
+	>	if Places.isEmpty() :
+	>		return 0
+	>	t1 = Func( Places.withoutFirst() )
+	>	t2 = Func( Places.withoutClosest(d) )
+	>	t2.profit += Places.top().income
+	>	t2.positions += Places.top().position
+	>	if t1.profit > t2.profit:
+	> 		return t1
+	>	else:
+	>		return t2
+	>}
+	>```
+	>**explanation:**   
+We divide the task into two subtasks: if we choose the first position to build a shop `t2` and if we don't `t1`. If we take it, we run the same algorithm recursively, with no positions closer to d than our `Places.withoutClosest(d)` . If we don't take it, we remove the first element from the array  `Places.withoutFirst()`.
+	>
+	
 2. Provide asymptotic worst-case time complexity of the recursive algo-
     rithm.
 3. Identify overlapping subproblems.
@@ -145,9 +174,9 @@ Figure 1: Initial AVL tree for insertion.
 4. List values at the nodes of the tree by in-order traversal of the tree. 
 	What property does resulting sequence have? Is this always the case?
 	#### Answer : 
-	>  ``` c++
+	> ``` c++
 	>		List : 1, 2, 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70
-	>```
+	> ```
 	>a. **property:** this list is sorted.  
 	>b. Yes, it is the main idea of  AVL tree.  
 6. Starting with the same initial tree, construct a 2-3 tree by inserting
