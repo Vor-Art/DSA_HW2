@@ -1,4 +1,5 @@
 
+
 # Data Structures and Algorithms
 > Spring 2021
 > Assignment No **2**
@@ -141,12 +142,21 @@ Consider the following sequence of numbers:
 ```
 Figure 1: Initial AVL tree for insertion.
 ```
-4. List values at the nodes of the tree by in-order traversal of the tree.
-    What property does resulting sequence have? Is this always the case?
-5. Starting with the same initial tree, construct a 2-3 tree by inserting
+4. List values at the nodes of the tree by in-order traversal of the tree. 
+	What property does resulting sequence have? Is this always the case?
+	#### Answer : 
+	>  ``` c++
+	>		List : 1, 2, 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70
+	>```
+	>a. **property:** this list is sorted.  
+	>b. Yes, it is the main idea of  AVL tree.  
+6. Starting with the same initial tree, construct a 2-3 tree by inserting
     values in the order of the sequence above.
-6. Explain in words or in pseudocodedeleteoperation for AVL trees.
-7. Give the trees obtained by deleting 45 and then 30 in the tree below.
+   	#### Answer : 
+	>  ![image](https://user-images.githubusercontent.com/47717531/112561025-69622900-8de5-11eb-91dc-28593f0d39a4.png)
+
+7. Explain in words or in pseudocode *delete* operation for AVL trees.
+8. Give the trees obtained by deleting 45 and then 30 in the tree below.
 
 ![image](https://user-images.githubusercontent.com/47717531/112557565-ce198580-8ddd-11eb-8a00-6af5f5d0ed0c.png)
 
