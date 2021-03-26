@@ -376,7 +376,43 @@ It works because array of places `Places` is systematically reduced from full to
 	
 9. Is Bubble Sort difficult to parallelize? Why? Provide pseudocode (and
     explain) a parallel version of bubble sort.
-
+#### Answer : 
+>
+>### Standart Bubble sort:
+>``` c++
+>bubbleSort (array) {
+>	for i=array.size()-1 downto 0:
+>		for j=0 to i :
+>			if array[j] > array[j+1] :
+>				swap(array[j], array[j+1])
+>}
+>```
+> In this case it is almost impossible to parallelize the program, because it is straightforward and depends on previous actions.
+> ### To parallelize, use odd-even bubble sorting
+> ``` c++
+> OddEvenBubble(array){
+>	for i=1 to n :
+>		for (j=1-i%2; j<n-1; j+=2)
+>			if array[j] > array[j+1]:
+>				swap(array[j],array[j+1]) 
+>	}
+> ```
+> ![image](https://user-images.githubusercontent.com/47717531/112681790-3f117980-8e80-11eb-8753-fa5ef02667e3.png)
+> The picture above perfectly illustrates how this program works.
+> The sequential complexity of this program is preserved because each phase of the algorithm (odd or even) requires comparison.
+> Now this code can be parallelized.
+> 
+> ###  Parallel  odd-even bubble sort:
+> ``` c++
+> ParallelOddEvenBubble (array, num_proc){
+>	id = GetProcId();// process number
+>	for(i=0; i< num_proc;i++){
+>		if( i%2 == id%2)
+>			compare_exchange_min(id+1)
+>		else 
+>			compare_exchange_max(id-1)
+>	}
+>```
 
 ### 2.3 Balanced Binary Search Trees
 
