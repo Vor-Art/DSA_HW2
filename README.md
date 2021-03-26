@@ -514,7 +514,7 @@ balance (L-R):
 	
 	#### Answer : 
 	> ``` c++
-	>		List : 1, 2, 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70
+	>	List : 1, 2, 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70
 	> ```
 	>a. **property:** this list is sorted.  
 	>b. Yes, it is the main idea of  AVL tree. 
@@ -522,7 +522,46 @@ balance (L-R):
 5. Starting with the same initial tree, construct a 2-3 tree by inserting
     values in the order of the sequence above.
    	#### Answer : 
-	>  ![image](https://user-images.githubusercontent.com/47717531/112561025-69622900-8de5-11eb-91dc-28593f0d39a4.png)
+	>A **2-3 tree** is a self-balancing search tree with an equilibrium condition.
+	>### node:
+	>    + one element and two children.
+	>    + two elements and three children.
+	>### Inserting an element:
+	>1. Start from the root
+	>2. if the greater value of the node is less than the element then go to the right, else: 
+	>3. if the smaller node value is greater than or equal to our key, then go to the left, else: 
+	>4. go to the center.
+	>5. Repeat step **2** until you reach the leaf
+	>6. insert an item
+	>### Balancing:
+	>1. If there are 3 elements in the node, then leave one central element in the node, and make the left and right elements subtrees. 
+	>2. Repeat until the tree is balanced.
+	> 
+	>## Steps:
+	>![image](https://user-images.githubusercontent.com/47717531/112687775-0c1fb380-8e89-11eb-8eb4-fe5fd575a1d3.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687801-10e46780-8e89-11eb-8c1b-a3fd6b348cf8.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687823-16da4880-8e89-11eb-98a9-d4c06eda9f7d.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687836-1d68c000-8e89-11eb-9943-f91b70fbb5eb.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687845-20fc4700-8e89-11eb-86ab-462853f48658.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687860-25c0fb00-8e89-11eb-9b81-06bac9179e36.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687883-2ce80900-8e89-11eb-8d09-4cbb273a4160.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687903-307b9000-8e89-11eb-85fb-c308217a13d9.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687921-340f1700-8e89-11eb-9f9f-fe8f1790fa36.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687941-38d3cb00-8e89-11eb-99c7-8744eaa2a71e.png)    
+	>![image](https://user-images.githubusercontent.com/47717531/112687965-412c0600-8e89-11eb-89f3-c20471366217.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687984-48ebaa80-8e89-11eb-8f5b-67b8c5dfe979.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112687991-4b4e0480-8e89-11eb-9feb-a7bb8538155d.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688010-52751280-8e89-11eb-9bbc-867328da82c5.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688015-53a63f80-8e89-11eb-913a-05866a428930.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688020-55700300-8e89-11eb-98d7-64895b0ac08a.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688022-5739c680-8e89-11eb-91df-c58f07990c7c.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688025-586af380-8e89-11eb-9fdf-81bac3cd6af3.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688033-5acd4d80-8e89-11eb-84b5-5a1a35b6c979.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688036-5bfe7a80-8e89-11eb-9a83-f11ce5ada05a.png)  
+	>![image](https://user-images.githubusercontent.com/47717531/112688043-5e60d480-8e89-11eb-901f-ea9f30d3880f.png)  
+	>## Final   
+	>![image](https://user-images.githubusercontent.com/47717531/112688058-60c32e80-8e89-11eb-83c1-bb4bb4aaf373.png)  
+
 
 6. Explain in words or in pseudocode *delete* operation for AVL trees.
    	#### Answer : 
