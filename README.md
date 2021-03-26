@@ -179,6 +179,11 @@ It works because array of places `Places` is systematically reduced from full to
 	> -   online (new elements can be added during the sort).
 3. Prove that the worst and the best case running times of insertion sort
     are Θ( _n_^2^ ) and Θ( _n_ ), respectively.
+   	#### Answer : 
+	> **Adding a one element** takes **O (n)** at *worst* and **O (1)** at *best* *case*.   
+	> **Prove**: If the array is sorted in ascending order and we add the largest element to the beginning, we need to make `n`checks to push it to the end. When adding the smallest element to the beginning, we compare it only with the first element and immediately insert it, respectively, only one check occurred.  
+	> **Adding a `n` elements** takes **O (n^2^)** at *worst* and **O (n)** at *best* *case*.   
+	
 4. What is a _k_ -sorted array? Is insertion sort fast or slow, relative to its
     worst-case, when applied to a _k_ -sorted array? Justify your answer by
     computing the running time of insertion sort for a _k_ -sorted array.
