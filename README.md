@@ -437,6 +437,20 @@ Consider the following sequence of numbers:
 	>
 	
 2. Explain in words or in pseudocodeinsertoperation for AVL trees.
+	#### Answer :   
+	>###The element is inserted in two stages: 
+	>1. insert
+	>2. balancing
+	>### I. **Insert**:
+	>1. Start from the root
+	>2. if the current node is larger than ours, then go to the left, otherwise to the right.
+	>3. repeat the second step recursively until we reach the leaf.
+	>### II. **Balancing**:
+	>1. Start with the inserted node
+	>2. Go to the parent
+	>3. |The difference between the heights of the subtrees| > 2 then apply the rotation
+	>4. Repeat step 2 recursively until you reach the root
+
 3. Considering the following tree as the initial state of the tree, construct
     the AVL tree by adding values in the order of the sequence above.
     Particular attention should be paid to explaining the reasoning.
