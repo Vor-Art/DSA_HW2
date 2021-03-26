@@ -158,20 +158,31 @@ It works because array of places `Places` is systematically reduced from full to
     gramming algorithm.
     
 	 #### Answer : 
-    >**I\O: thee same as 2.1.1**
-    >
-    >a
+    > The **worst-case** occurs when recursion reduces the size of the array by only one with each step (as shown in the picture).
+    >![image](https://user-images.githubusercontent.com/47717531/112659291-470ff000-8e65-11eb-9acb-7bb0021ee771.png)
+    > The time complexity can be computed by a tree. I have illustrated the schematic approach. At each step, two subproblems are run, of which only one is actually calculated. hence, the **worst-case** time complexity is Θ(n)
+    
 
 ### 2.2 Sorting
 
 
 1. Briefly explain how insertion sort works.
-2. Prove that the worst and the best case running times of insertion sort
+	#### Answer : 
+	>## Insert sorting is one of the sorting algorithms.
+	>- An empty additional array is created, where new elements will be added.
+	>- When adding a new element, the program sequentially iterates through the existing sorted sequence until it finds a place that satisfies the condition.
+	>- And so all the elements from the original array are inserted into this array, thereby sorting it.
+	> ## Insertion sort properties
+	> -   adaptive (performance adapts to the initial order of elements);
+	> -   stable (insertion sort retains relative order of the same elements);
+	> -   in-place (requires constant amount of additional space);
+	> -   online (new elements can be added during the sort).
+3. Prove that the worst and the best case running times of insertion sort
     are Θ( _n_^2^ ) and Θ( _n_ ), respectively.
-3. What is a _k_ -sorted array? Is insertion sort fast or slow, relative to its
+4. What is a _k_ -sorted array? Is insertion sort fast or slow, relative to its
     worst-case, when applied to a _k_ -sorted array? Justify your answer by
     computing the running time of insertion sort for a _k_ -sorted array.
-4. Implement a comparison-based sorting algorithm to sort the following
+5. Implement a comparison-based sorting algorithm to sort the following
     table of data, containing information on events (code, start_date,
     end_date,sponsor,description). Given thecodeas the key, provide
     a pseudocode for comparing two keys that will be used in your sorting
