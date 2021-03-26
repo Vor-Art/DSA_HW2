@@ -132,9 +132,35 @@ We divide the task into two subtasks: if we choose the first position to build a
     problem using dynamic programming (top-down or bottom-up). The
     algorithm should compute both the maximum estimated revenue **and**
     the specific locations where shopping centers should be placed.
+
+	 #### Answer : 
+    >**I\O: thee same as 2.1.1**
+	>``` c++
+	>Func (Places) -> pair(profit, positions)
+	>{
+	>	static Arr = NULL // storage of of overlapping
+	>	if Places.isEmpty() :
+	>		return 0
+	>	if Arr[Places.size()] == NULL :
+	>		t1 = Func( Places.withoutFirst() )
+	>		t2 = Func( Places.withoutClosest(d) )
+	>		t2.profit += Places.top().income
+	>		t2.positions += Places.top().position
+	>		Arr[Places.size()]  = t1 if t1.profit > t2.profit else t2
+	>	return Arr[Places.size()] 
+	>}
+	>```
+	>**explanation:**   
+It works because array of places `Places` is systematically reduced from full to zero capacity. So running the function with arrays of the same size will give the same result. We store it's calculated value under the size index in `Arr`.
+	>
+
 5. Provide asymptotic worst-case time complexity of the dynamic pro-
     gramming algorithm.
-
+    
+	 #### Answer : 
+    >**I\O: thee same as 2.1.1**
+    >
+    >a
 
 ### 2.2 Sorting
 
