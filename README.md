@@ -330,9 +330,50 @@ It works because array of places `Places` is systematically reduced from full to
 	>`T(n) = Θ(log(n))` 
 	>
 	
-8. Explain the benefit of usingsearchin the context of insertion sorting.
+8. Explain the benefit of using search in the context of insertion sorting.
     Give a version of insertion sorting usingsearch. How does it affect the
     time complexity of insertion sort?
+    
+	#### Answer : 
+    
+	>## Benefits:    
+	>Because you can use a binary search to find the place where the element will insert.  
+	>The main advantage is that you can split the sorting into two independent modules: search and paste. Modularity is always excellent.  
+	>## Implementation:    
+	>``` c++
+	>upper_bound(array, from, to, x){ // asymptotic time O(log(n))
+	>		middle = (from + to)/2
+	>		if array[middle] == x :
+	>			return middle
+	>		if from == to :
+	>			return to + 1 if x > array[to] else to
+	>		if array[middle] < x:
+	>			return = belongs(array, middle, to, x)
+	>		if array[middle] > x:
+	>			return = belongs(array, from, middle, x)
+	>}
+	>```
+	>
+	>``` c++
+	>insert(array, place, element){ // asymptotic time O(n)
+	>		array.push_back(element)
+	>		for i = array.size() - 1 downto place :
+	>			swap(array.at(i -1), array.at(i))
+	>}
+	>```
+	>
+	>``` c++
+	>insertionSort(array){ // asymptotic time O(n^2^)
+	>		for i = 0 to array.size() :				// n times
+	>			element = array.at(i)
+	>			pos = upper_bound(array, 0,  i-1, element) // O(log(n))
+	>			insert (array, pos, element)							// O(n)
+	>}
+	>```
+	>## How does it affect?
+	>The asymptotic complexity will not decrease, because the shift of the elements will be n times in O (n)
+	>
+	
 9. Is Bubble Sort difficult to parallelize? Why? Provide pseudocode (and
     explain) a parallel version of bubble sort.
 
