@@ -250,10 +250,46 @@ It works because array of places `Places` is systematically reduced from full to
 >
 
 5. Write two versions, one recursive, the other iterative, of a boolean
-    function namedbelongswhich takes as arguments an arrayAof ordered
-    integers, a start indexfrom, an end indextoand an integerxto search
-    for and which returnstrueifxis in the arrayAbetween indexfrom
-    and indexto, andfalseotherwise.
+    function named **belongs** which takes as arguments an array **A** of ordered
+    integers, a start index **from**, an end index **to** and an integer **x** to search
+    for and which returns **true** if **x** is in the array **A** between index **from**
+    and index **to**, and **false** otherwise.
+    
+    #### Answer : 
+    
+	>## Iterative:  
+	>
+	>``` c++
+	>belongs(array, from, to, x){
+	>	while True : // waiting for an interruption.
+	>		middle = (from + to)/2
+	>		if array[middle] == x:
+	>			return True
+	>		if from == to :
+	>			return False
+	>		if array[middle] < x:
+	>			from = middle
+	>		if array[middle] > x:
+	>			to = middle
+	>}
+	>```
+	>
+	>## Recursive:  
+	>
+	>``` c++
+	>belongs(array, from, to, x){
+	>		middle = (from + to)/2
+	>		if array[middle] == x :
+	>			return True
+	>		if from == to :
+	>			return False
+	>		if array[middle] < x:
+	>			return = belongs(array, middle, to, x)
+	>		if array[middle] > x:
+	>			return = belongs(array, from, middle, x)
+	>}
+	>```
+
 6. Write a variant of the previous function calledsearchwhich takes the
     same arguments asbelongs, and which returns the indexiof the cell
     containingxifxappears in the arrayAbetween the indexfromand
