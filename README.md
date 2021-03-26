@@ -491,9 +491,9 @@ balance(left-right):
 11. 50: insert:  
 	![image](https://user-images.githubusercontent.com/47717531/112685600-e1802b80-8e85-11eb-9167-c5b68766583c.png)
 12. 55: insert:    
-	![image](https://user-images.githubusercontent.com/47717531/112685628-e80ea300-8e85-11eb-8946-a1c04d969ca1.png)
-balance (R-L):  
-	![image](https://user-images.githubusercontent.com/47717531/112685662-f2c93800-8e85-11eb-95f2-c16b4603b24f.png)  
+	![image](https://user-images.githubusercontent.com/47717531/112685628-e80ea300-8e85-11eb-8946-a1c04d969ca1.png)   
+balance (R-L):   
+	![image](https://user-images.githubusercontent.com/47717531/112685662-f2c93800-8e85-11eb-95f2-c16b4603b24f.png)   
 13. 30: insert:  
 	![image](https://user-images.githubusercontent.com/47717531/112685701-01175400-8e86-11eb-969f-d77c1da26c53.png)  
 balance (L-R):   
