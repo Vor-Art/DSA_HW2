@@ -542,6 +542,21 @@ balance (L-R):
 ```
 Figure 2: Initial AVL tree for deletion.
 ```
+#### Answer :  
+
+> 1. delete 45:  
+> 	![image](https://user-images.githubusercontent.com/47717531/112687381-78e67e00-8e88-11eb-89b5-1cfd7f452c64.png)  
+> balancd(R-L):  
+> 	![image](https://user-images.githubusercontent.com/47717531/112687427-8865c700-8e88-11eb-9342-82894926a34e.png)  
+> balancd(L-R):	 
+> 	![image](https://user-images.githubusercontent.com/47717531/112687475-987da680-8e88-11eb-93bd-76d73a0167b4.png)  
+> 2. delete 30:(swap with predecessor and remove)  
+>    	![image](https://user-images.githubusercontent.com/47717531/112687567-b8ad6580-8e88-11eb-9244-64f60087412a.png)  
+> 	
+	
+	
+
+
 
 ### 2.4 Binary Heap
 
