@@ -417,11 +417,25 @@ It works because array of places `Places` is systematically reduced from full to
 ### 2.3 Balanced Binary Search Trees
 
 Consider the following sequence of numbers:
-
 ```
 25 , 60 , 35 , 10 , 5 , 20 , 65 , 45 , 70 , 40 , 50 , 55 , 30 , 15
 ```
 1. Explain in words the properties of AVL trees.
+	#### Answer :   
+	> The AVL tree is an automatically balanced binary search tree.  
+	>
+	> **Balancing condition:** For each node, the absolute value of the height difference between the left and right   subtrees is no more than 1.
+	>**Binary search tree:** provides search O (log(n))  
+	> #### How to balance the tree:  
+	>there are 4 types of rotation used:  
+    >1. Left rotation
+    >2. Right rotation
+    >3. Left-Right rotation
+    >4. Right-Left rotation 
+    >
+	>This balancing rotation applies to a node if its left and right subtrees differ in height by 2.
+	>
+	
 2. Explain in words or in pseudocodeinsertoperation for AVL trees.
 3. Considering the following tree as the initial state of the tree, construct
     the AVL tree by adding values in the order of the sequence above.
