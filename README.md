@@ -1,5 +1,6 @@
 
 
+
 # Data Structures and Algorithms
 > Spring 2021
 > Assignment No **2**
@@ -524,6 +525,16 @@ balance (L-R):
 	>  ![image](https://user-images.githubusercontent.com/47717531/112561025-69622900-8de5-11eb-91dc-28593f0d39a4.png)
 
 6. Explain in words or in pseudocode *delete* operation for AVL trees.
+   	#### Answer : 
+	>###Two cases of deleting an item:
+	>+ **Deleting a leaf:** 
+	>   1. remove the leaves
+	>   2. balancing from the parent to the root of the tree.
+	>
+	>+ **Deleting a node:**
+	>   1. swap the node with its predecessor or successor (with a larger subtree).
+	>   2. call a **deleting a leaf** for it.
+	>    
 7. Give the trees obtained by deleting 45 and then 30 in the tree below.
 
 ![image](https://user-images.githubusercontent.com/47717531/112557565-ce198580-8ddd-11eb-8a00-6af5f5d0ed0c.png)
