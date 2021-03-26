@@ -166,7 +166,7 @@ It works because array of places `Places` is systematically reduced from full to
 ### 2.2 Sorting
 
 
-1. Briefly explain how insertion sort works.
+1. Briefly explain how insertion sort works.  
 	#### Answer : 
 	>## Insert sorting is one of the sorting algorithms.
 	>- An empty additional array is created, where new elements will be added.
@@ -177,17 +177,25 @@ It works because array of places `Places` is systematically reduced from full to
 	> -   stable (insertion sort retains relative order of the same elements);
 	> -   in-place (requires constant amount of additional space);
 	> -   online (new elements can be added during the sort).
-3. Prove that the worst and the best case running times of insertion sort
-    are Θ( _n_^2^ ) and Θ( _n_ ), respectively.
+2. Prove that the worst and the best case running times of insertion sort
+    are Θ( _n_^2^ ) and Θ( _n_ ), respectively.  
+    
    	#### Answer : 
 	> **Adding a one element** takes **O (n)** at *worst* and **O (1)** at *best* *case*.   
 	> **Prove**: If the array is sorted in ascending order and we add the largest element to the beginning, we need to make `n`checks to push it to the end. When adding the smallest element to the beginning, we compare it only with the first element and immediately insert it, respectively, only one check occurred.  
 	> **Adding a `n` elements** takes **O (n^2^)** at *worst* and **O (n)** at *best* *case*.   
+	> ___
+	> Provided that the insertion in any place is free, as in the list.
 	
-4. What is a _k_ -sorted array? Is insertion sort fast or slow, relative to its
+3. What is a _k_ -sorted array? Is insertion sort fast or slow, relative to its
     worst-case, when applied to a _k_ -sorted array? Justify your answer by
     computing the running time of insertion sort for a _k_ -sorted array.
-5. Implement a comparison-based sorting algorithm to sort the following
+
+ 	#### Answer : 
+	> • A k-sorted array is an array whose elements are no further than k positions from their target position in the sorted array.   
+	> • Insertion sort in the worst-case for a k-sorted array will take less time, because finding a place for each new element will not be more than k, otherwise the element will be further than k from the original position, so inserting n elements will take  time.   
+
+4. Implement a comparison-based sorting algorithm to sort the following
     table of data, containing information on events (code, start_date,
     end_date,sponsor,description). Given thecodeas the key, provide
     a pseudocode for comparing two keys that will be used in your sorting
@@ -200,6 +208,46 @@ It works because array of places `Places` is systematically reduced from full to
 | B001 | 10-04-2021 | 17-04-2021 | MTS     | ...         |
 | A009 | 12-04-2021 | 15-04-2021 | GTK     | ...         |
 
+#### Answer :    
+>	**input:**  
+>* **array** is array of data that will be sorted  
+>* **compFunc** is a comparison function  
+>**output:**  
+>* sorted array  
+>  
+>``` c++  
+>insertSort (array, compFunc) {
+>	tmpArr = { array.at(0) }
+>	for i = 1 to array.size() : 
+> 		tmpArr.push_pack( array.at(i) )
+>		for j = tmpArr.Size()-1 downto i :
+>			if compFunc(tmpArr.at(j-1) , tmpArr.at(j)) :
+>				break
+>			else:
+>				swap(tmpArr.at(j-1) , tmpArr.at(j))
+> 	return tmpArr 
+>}
+>```
+>
+>**input:**
+>* **left** and **right** is the user's elements from table above
+>**output:**
+>* logical answer of operator less than 
+>
+>```c++
+>myCompFunc (left , right) {
+>	if left.code != left.code:
+>		return left.code < left.code
+>	if left.date_start != left.date_start:
+>		return left.date_start < left.date_start
+>	if left.date_end != left.date_end:
+>		return left.date_end < left.date_end
+>	if left.sponsor != left.sponsor:
+>		return left.sponsor < left.sponsor
+>	... // by description and etc.
+>}
+>```
+>
 
 5. Write two versions, one recursive, the other iterative, of a boolean
     function namedbelongswhich takes as arguments an arrayAof ordered
