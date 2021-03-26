@@ -673,7 +673,7 @@ medianHeap.isEmpty()// O(1)
   return (size == 0)
 end
 
-medianHeap::get_median() // O(1)
+medianHeap.get_median() // O(1)
   if(size == 0)
     return 0
     
