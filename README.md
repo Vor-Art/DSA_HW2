@@ -181,9 +181,9 @@ It works because array of places `Places` is systematically reduced from full to
     are Θ( _n_^2^ ) and Θ( _n_ ), respectively.  
     
    	#### Answer : 
-	> **Adding a one element** takes **O (n)** at *worst* and **O (1)** at *best* *case*.   
+	> **Adding a one element** takes **Θ (n)** at *worst* and **Θ (1)** at *best* *case*.   
 	> **Prove**: If the array is sorted in ascending order and we add the largest element to the beginning, we need to make `n`checks to push it to the end. When adding the smallest element to the beginning, we compare it only with the first element and immediately insert it, respectively, only one check occurred.  
-	> **Adding a `n` elements** takes **O (n^2^)** at *worst* and **O (n)** at *best* *case*.   
+	> **Adding a `n` elements** takes **Θ (n^2^)** at *worst* and **Θ (n)** at *best* *case*.   
 	> ___
 	> Provided that the insertion in any place is free, as in the list.
 	
@@ -289,13 +289,47 @@ It works because array of places `Places` is systematically reduced from full to
 	>			return = belongs(array, from, middle, x)
 	>}
 	>```
+	>
 
-6. Write a variant of the previous function calledsearchwhich takes the
-    same arguments asbelongs, and which returns the indexiof the cell
-    containingxifxappears in the arrayAbetween the indexfromand
-    the indextoandnullotherwise.
+6. Write a variant of the previous function called search which takes the
+    same arguments as belongs, and which returns the indexi of the cell
+    containing x if x appears in the array A between the index from and
+    the index to and null otherwise.  
+      
+     #### Answer : 
+    
+	>## Recursive:  
+	>
+	>``` c++
+	>search(array, from, to, x){
+	>		middle = (from + to)/2
+	>		if array[middle] == x :
+	>			return middle
+	>		if from == to :
+	>			return NULL
+	>		if array[middle] < x:
+	>			return = belongs(array, middle, to, x)
+	>		if array[middle] > x:
+	>			return = belongs(array, from, middle, x)
+	>}
+	>```
+	>
+	
 7. Establish the recurrence relation for the running time ofsearchand
     determine the time complexity by applying Master Theorem.
+     #### Answer : 
+    
+	>## Time complexity:  
+	>`T(n) = T(n/2) + c` , were n - amount of elements between from and to; c - some constant
+	>### Master Theorem:  
+	> ```
+	>1. a = 1, b = 2, f(n) = Θ (1) = Θ(n^0^log^0^n) 
+	>2. C = 0, k = 0, Ccrit = log(a)/log(b) = 0
+	>```
+	>##### Case *II*: `C == Ccrit`
+	>`T(n) = Θ(log(n))` 
+	>
+	
 8. Explain the benefit of usingsearchin the context of insertion sorting.
     Give a version of insertion sorting usingsearch. How does it affect the
     time complexity of insertion sort?
